@@ -51,13 +51,37 @@
         <div class="finder">
             <h1>Having Difficulty in finding home ? <br>Don't Worry!! <br>We got it.</h1>
             <p>Find yourself a perfect home for Sale or Rent</p>
-            <button>View Homes</button>
+            <!-- <button>View Homes</button> -->
         </div>
         <div class="guyshome">
             <img src="./bachelors.jpeg" alt="bachelors at home">
         </div>
+        
    </div>
+   <div class="search-container">
+    <label for="location">Type:</label>
+    <select id="Type">
+      <option value="any">Any</option>
+      <option value="family">Family</option>
+      <option value="city">Bachelors</option>
+      <option value="suburb">Live-In</option>
+    </select>
 
+    <label for="bedrooms">Bedrooms:</label>
+    <select id="bedrooms">
+      <option value="any">Any</option>
+      <option value="1">1 Bedroom</option>
+      <option value="2">2 Bedrooms</option>
+      <option value="3">3 Bedrooms</option>
+      <option value="4">4 Bedrooms</option>
+    </select>
+
+    <label for="price-range">Price Range:</label>
+    <input type="number" id="min-price" placeholder="Min">
+    <span>-</span>
+    <input type="number" id="max-price" placeholder="Max">
+    <button type="button" onclick="searchProperties()">Search</button>
+  </div>
     <!-- End of Welcome section -->
 
     <!-- Apartments buy Section -->
