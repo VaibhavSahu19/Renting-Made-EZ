@@ -47,7 +47,7 @@
 
 .login-container::before{
     content: "";
-    background-image: url('../Pages/background.png'); 
+    background-image: url('./background.png'); 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
