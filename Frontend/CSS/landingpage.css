@@ -4,74 +4,137 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Libre Baskerville', sans-serif;
+    font-family: 'Nunito','Libre Baskerville', sans-serif;
+
 }
 
 /* Navigation bar section */
 .nav-bar {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     background-color: rgb(239, 243, 242);
 }
+
+.search-bar-div{
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding: 1vh;
+    background-color: rgb(219, 222, 222);
+    border-radius: 50px;
+}
+.search-logo-span{
+    height: auto;
+    width: 33px;
+    position: relative;
+}
+
+.search-logo-span img{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 100%;
+    max-height: 100%;
+    height: 14px;
+    width: 14x;
+    object-fit: contain;
+}
+
+.search-bar{
+    height: 33px;
+    border: none;
+    width: 75%;
+    padding: 7px;
+    background-color: transparent;
+    font-family: 'Roboto', 'Sans-serif';
+}
+.search-bar:focus{
+    outline: none;
+}
+
 .logo img{
     height: 150px;
+    width: 100%;
     object-fit: cover;
 }
 .items ul li{
     display: inline-block;
     justify-content: space-around;
-    font-size: 20px;
-    padding: 30px;
+    font-size: 2vw;
+    padding: 10px;
     color: #C84B31;
     font-weight: bold;
 }
 
+li:after{
+    content: '';
+    margin: auto;
+    display: block;
+    height: 2px;
+    width: 0%;
+    transition: all 0.5s ease;
+    background-color: transparent;
+}
+
+li:hover:after{
+    width: 100%;
+    background-color: teal;
+}
+
+
+form {
+    display: block;
+    margin-top: 0em;
+}
+:after, :before {
+    box-sizing: border-box;
+}
 /* #09b565  */
 /* #C84B31 */
 .logbtn {
     display: flex;
+    text-align: center;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     color: teal;
-    /* margin: 20px;
-    padding: 10px; */
+    width: 15%;
 
 }
 .login {
     padding: 10px;
     width: 7vw;
-    color: black;
-    border: .5px solid teal;
-    background: white;
+    color: white;
+    border: .5px solid white;
+    background: teal;
     border-radius: 5px;
-    margin-right: 20px;
     cursor: pointer;
 
 }
 .register {
     padding: 10px;
     width: 7vw;
-    color: black;
-    border: .5px solid teal;
-    background: white;
+    color: white;
+    border: .5px solid white;
+    background: teal;
     border-radius: 5px;
     cursor: pointer;
 }
-.login:hover {
+/* .login:hover {
     background-color: teal;
     color: white;
     transition: opacity 1s ease-in-out;
-}
-.register:hover {
-   background: teal;
+} */
+.register:hover, .login:hover {
+   background: rgb(2, 98, 117);
    color: white;
    transition: opacity 1s ease-in-out;
 }
 
 .login:active,.register:active{
-    background-color: #c1968d;
+    background-color: rgb(1, 68, 81);
     transition: opacity 1s ease-in-out;
 }
 /* End of navigation bar section */
@@ -79,75 +142,122 @@
 /* Welcome text section with image on the right */
 
 .slogan {
-    height: 130vh;
+    height: auto;
     width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    background-image: url('/Frontend/Images/house2.jpg');
+    background-image: url('./house2.jpg');
     background-size: 2500px 2500px;
     background-position: middle;
     box-shadow: rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px;
 }
 .finder {
     display: flex;
+    width: 50%;
     flex-direction: column;
     justify-content: center ;
     align-items: flex-start;
 }
 
+.guyshome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
 .guyshome img {
-    margin-right: 40px;
-    margin-top: 90px;
-    background-size: contain;
-    height: 95vh;
-    width: 80vh;
+    background-size: cover;
+    height: auto;
+    width: 100%;
     border-radius: 30px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
 .finder h1 {
     color: rgb(1, 69, 82);
-    font-size: 44px;
-    padding: 10px;
+    font-size: 4vw;
 }
 .finder p {
     color: #C84B31;
+    height: 10vh;
+    width: 100%;
     font-size: 17px;
     font-weight: 800;
     margin-top: 4px;
     padding: 5px;
-    margin-left: 8px;
     
 }
-.finder button {
+.finder button{
+    display: block;
     padding: 5px;
     font-size: 20px;
-    width: 10vw;
-    height: 3vw;
+    width: 30%;
+    height: auto;
     border: .5px solid teal;
-    background: white;
+    background: teal;
     border-radius: 5px;
     margin-top: 40px;
     align-self: flex-start;
-    color: black;
-    margin-left: 10px;
+    color: white;
     transition: opacity 1s ease-in-out;
+    margin-bottom: 10px;
 }
 
+
 .finder button:hover{
-    background-color: teal;
+    background-color: rgb(2, 98, 117);
     color: white;
     cursor: pointer;
 }
 
+.search-container {
+    background-color: rgb(239, 243, 242);;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 50px;
+  }
+  
+  label {
+    margin-right: 10px;
+  }
+  
+  select, input {
+    margin-right: 10px;
+    padding: 5px;
+  }
+  
+  button {
+    background-color: teal;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: rgb(2, 98, 117);;
+  }
+  button:active{
+    background-color: rgb(1, 68, 81);;
+  }
 /* End of welcome text section */
 
 /* Newly listed apartments section */
 
 .apartment {
-    height: 200vh;
+    height: auto;
     width: 100%;
+}
+
+.apt-img{
+    padding: 5vh;
+    text-align: center;
 }
 .titlenew {
     padding: 20px;
@@ -165,23 +275,14 @@
     font-family: 'Roboto', sans-serif;
     text-align: center;
 }
-.aptlist {
-   /*  margin-left: 30px;
-    margin-right: 30px; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    /* align-items: center; */
-    flex-wrap: wrap;
-    
-}
+
 
 .list1 {
     display: flex;
     flex-direction: column;
     border-radius: 30px;
-    height: 430px;
-    width: 280px;
+    height: auto;
+    width: 25%;
     background: #e8ecee;
     margin-top: 10px;
 
@@ -196,10 +297,8 @@
 }
 
 .list1 img {
-    height: 280px;
-    width: 280px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
+    height: 40vh;
+    width: 40vh;
 }
 
 .list1 h3 {
@@ -239,13 +338,32 @@
 .booknow:hover {
     background: rgb(1, 69, 82);
     box-shadow: 0 25px 45px rgba(0,0,0,0.5);
-  transition: opacity 0.9s ease-in-out;
+    transition: opacity 0.9s ease-in-out;
 }
 .second {
     margin-top: 30px;
     padding: 8px;
 }
+.aptlist {
+    /*  margin-left: 30px;
+     margin-right: 30px; */
+     display: flex;
+     flex-direction: row;
+     justify-content: space-evenly;
+     /* align-items: center; */
+     flex-wrap: wrap;
+     
+ }
+ 
+ .apt-details{
+    padding: 5vh;
+    display: block;
+    justify-content: center;
+ }
 
+ .price{
+    align-items: center;
+ }
 /* Our services section */
 
 .services {
@@ -256,7 +374,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: #fafafa;
+    background: #ffffff;
 }
 .servicestext {
     align-items: center;
@@ -299,10 +417,10 @@
     font-weight: bold;
     align-items: center;
     padding: 50px;
-    height: 150vh;
+    height: auto;
     width: 100%;
-    background-image:url('/Frontend/Images/buy5.jpeg');
-    background-size:4000px;
+    background-image:url('./buy5.jpeg');
+    background-size:1400vh;
     object-position: center;
     /* background: #e9ecee; */
 }
@@ -332,30 +450,22 @@
     line-height: 30px;
 }
 
-
-
-
-
 /* Reviews section styling */
 .industry {
     position: relative;
-   display: flex;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
-   background: #fafafa;
-   color: black;
-   height: 180vh;
-   margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #ffffff;
+    color: black;
+    height: auto;
+    margin-top: 70px;
 }
 
 .industry .ind {
-   
-    
     text-align: center;
     padding: 30px;
-    
-
 }
 .industry .ind h2 {
     font-size: 25px;
@@ -368,22 +478,20 @@
 .slate {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     box-sizing: border-box;
     margin-top: 10px;
-/*     border: 2px solid rgb(190, 187, 187);
- */
+    width: 100%;
 } 
 .slate .part1 {
-    height: 380px;
-    width: 240px;
+    height: auto;
+    width: 20%;
     padding: 30px;
     border: 1px solid rgb(207, 199, 199);
     border-radius: 5px;
     text-align: center;
     font-size: 10pt;
-    margin-right: 30px;
 }
 
 .slate .part1 p {
@@ -397,19 +505,15 @@
 
 
 .slate .part2 {
-    height: 380px;
-    width: 240px;
+    height: auto;
+    width: 20%;
     padding: 30px;
     border: 1px solid rgb(207, 199, 199);
     border-radius: 5px;
     text-align: center;
     font-size: 10pt;
 }
-/* .slate .part2 .pic1 {
-    height: 150px;
-    width: 150px;
-    padding: 20pxS;
-} */
+
 .slate .part2 p {
     margin-top: 20px;
 }
@@ -421,20 +525,15 @@
 
 
 .slate .part3 {
-    height: 380px;
-    width: 240px;
+    height: auto;
+    width: 20%;
     padding: 30px;
     border: 1px solid rgb(207, 199, 199);
     border-radius: 5px;
     text-align: center;
     font-size: 10pt;
-    margin-left: 30px;
 }
-/* .slate .part3 .pic1 {
-    height: 150px;
-    width: 150px;
-    padding: 20pxs;
-} */
+
 .slate .part3 p {
     margin-top: 20px;
 }
@@ -451,7 +550,6 @@
 
 }
 
-/* THE VECTOR SECTION STARTS HERE */
 .industry .vectors ul li {
     text-decoration: none;
     list-style: none;
@@ -467,29 +565,14 @@
     margin-top: 130px;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* FOOTER SECTION STARTS HERE */
-
 .callus {
-    height: 60vh;
-    width: 100%;
+    height: auto;
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background: #fafafa;
+    background: #ffffff;
     color: black;
     margin-top: 100px;
 }
@@ -524,166 +607,103 @@
 .callus .click button:hover{
     background-color: rgb(1, 69, 82);
 }
-/* footer section starts here */
 
-.ftr {
+.callus .click button:active{
+    background-color: rgb(1, 68, 81);
+}
+@media screen and (max-width: 600px){
+    button{
+        font-size: 5px;
+    }
+    .logo{
+        width: 30%;
+        height: auto;
+        padding: 10px;
+    }
+    .logo img{
+        object-fit: contain;
+    }
+
+    .guyshome img{
+        width: 70%;
+    }
+
+    .login, .register{
+        width: 100%;
+        font-size: 8px;
+    }
+
+    .finder button{
+        display: flex;
+        justify-content: center;
+    }
+    .list1 {
+        height: auto;
+        width: 80%; 
+    }
+    .servicestext{
+        padding: 10vh;
+    }
+
+    .finder{
+        width: 80%;
+    }
+    .slogan{
+        justify-content: center;
+        align-items: center;
+    }
     
-    color: black;
-    height: 100vh;
-    width: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content:center;
-    align-items: flex-end;
+    .about{
+        display: flex;
+        height: auto;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        background-size: 2000vh;
+        background-position: left;
+    }
+
+    .aboutus{
+        align-items: center;
+    }
+    .aboutus p{
+        width: 150%;
+    }
+
+    .aboutus h1{
+        width: 150%;
+        text-align: center;
+    }
+
+    .aboutus h3{
+        width: 150%;
+    }
+    .collabo{
+        width: 80%;
+        display: flex;
+        align-items: center;
+    }
+    .slate{
+        flex-direction: column;
+        width: 100%;
+        padding-right: 5px;
+        align-items: center;
+    }
+
+    .slate .part1{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .slate .part2{
+        width: 50%;
+        margin-bottom: 20px;
+    }
+
+    .slate .part3{
+        width: 50%;
+        margin-bottom: 20px;
+    }
 }
-
-/* Company starts here */
-
-.company h4 {
-    font-weight: 900;
-    margin-left: 20px;
-    margin-bottom: 30px;
-}
-
-.company ul {
-    list-style: none ;
-    padding: 15px;
-    text-align: left;
-    /* margin: 10px 0; */
-    
-}
-.company ul li {
-    margin: 12px 0px;
-}
-
-.company ul li a {
-    color: #011101;
-    font-weight: 300;
-    font-size: 10pt;
-    text-decoration: none;
-    list-style: none;
-} 
-
-/* legal starts here */
-
-.legal h4 {
-    font-weight: 900;
-    margin-left: 20px;
-
-}
-
-.legal ul {
-    list-style: none ;
-    padding: 20px;
-    text-align: left;
-    /* margin: 10px 0; */
-    
-}
-.legal ul li {
-    margin: 10px 0;
-}
-
-.legal ul li a {
-    color: #011101;
-    font-weight: 300;
-    font-size: 10pt;
-    text-decoration: none;
-    list-style: none;
-} 
-
-
-/* Features starts here */
-
-.features img {
-    height: 80px;
-    width: 80%;
-    margin-left: 40px;
-    margin-right: 40px;
-    border-radius: 50px;
-
-}
-
-.ftr .features ul {
-    list-style: none ;
-    padding: 20px;
-    text-align: left;
-    /* margin: 10px 0; */
-    
-}
-.ftr .features ul li {
-    margin: 10px 0;
-}
-
-.ftr .features ul li a {
-    color: #011101;
-    font-weight: 300;
-    font-size: 10pt;
-    text-decoration: none;
-    list-style: none;
-} 
-
-/* Resources Start here */
-
-.ftr .resources h4 {
-    font-weight: 900;
-    margin-left: 20px;
-
-}
-
-.ftr .resources ul {
-    list-style: none ;
-    padding: 20px;
-    text-align: left;
-    /* margin: 10px 0; */
-    
-}
-.ftr .resources ul li {
-    margin: 10px 0;
-}
-
-.ftr .resources ul li a {
-    color: #011101;
-    font-weight: 300;
-    font-size: 10pt;
-    text-decoration: none;
-    list-style: none;
-} 
-
-
-/* Intouch starts here */
-
-.ftr .intouch h4 {
-    font-weight: 900;
-    margin-left: 20px;
-    padding: 0;
-    margin-bottom: 10px;
-
-}
-
-.ftr .intouch ul {
-    list-style: none ;
-    padding: 20px;
-    text-align: left;
-    /* margin: 10px 0; */
-    
-}
-.ftr .intouch ul li {
-    margin: 0 0;
-}
-
-.ftr .intouch ul li a {
-    color: #011101;
-    font-weight: 300;
-    font-size: 15px;
-    text-decoration: none;
-    list-style: none;
-} 
-.ftr .intouch ul li a img {
-    display: inline-block;
-    height: 30px;
-    width: 30px;
-    margin-top: 10px;
-}
-
