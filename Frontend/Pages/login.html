@@ -3,9 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Log-in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+
+    <title>Log-in Page</title>
+    <link rel="stylesheet" href="../CSS/login.css">
 </head>
 <body>
+    <header>
+        <div class="nav-bar">
+            <a href="../Pages/index.html">
+                <div class="logo">
+                    <img src="./logo2.png" alt="logo">
+                </div>
+            </a>
+            <div class="newuser-section">
+                <div class="newuser-link">New Here?
+                    <a class="newuser-link" href="">Sign Up</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="login-container">
+        <div class="login-box">
+            <div class="login-heading">
+                <h2>Login</h2>
+            </div>
+            <div class="email-section">
+                <div class="email-head">
+                    Email
+                </div>
+                <span class="email-span">
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="text" class="email" required="required">
+                </span>
+            </div>
+            <div class="password-section">
+                <div class="password-head">
+                    Password
+                </div>
+                <span class="password-span">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" class="password" required="required">
+                    <i class="fa-solid fa-eye-slash eyeicon" ></i>
+                </span>
+            </div>
+            <div class="forgot-section">
+                <a class="forgot-link" href="">Forgot Username/Password ?</a>
+            </div>
+            <a class="login-btn-link" href="../Pages/index.html">
+                <div class="login-btn-section">
+                    <button class="login-btn">
+                        Login
+                    </button>
+                </div>
+            </a>
+        </div>
+    </div>
     
+
+    <script src="https://kit.fontawesome.com/e49de04765.js" crossorigin="anonymous">
+    </script>
+    <script src="../Scripts/loginpage.js"></script>
 </body>
 </html>

@@ -4,7 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Libre Baskerville', sans-serif;
+    font-family: 'Nunito','Libre Baskerville', sans-serif;
 
 }
 
@@ -28,7 +28,6 @@
 .search-logo-span{
     height: auto;
     width: 33px;
-    
     position: relative;
 }
 
