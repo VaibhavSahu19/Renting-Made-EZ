@@ -113,7 +113,7 @@ form {
     cursor: pointer;
 
 }
-.register {
+.signup {
     padding: 10px;
     width: 7vw;
     color: white;
@@ -127,13 +127,13 @@ form {
     color: white;
     transition: opacity 1s ease-in-out;
 } */
-.register:hover, .login:hover {
+.signup:hover, .login:hover {
    background: rgb(2, 98, 117);
    color: white;
    transition: opacity 1s ease-in-out;
 }
 
-.login:active,.register:active{
+.login:active,.signup:active{
     background-color: rgb(1, 68, 81);
     transition: opacity 1s ease-in-out;
 }
@@ -628,7 +628,7 @@ form {
         width: 70%;
     }
 
-    .login, .register{
+    .login, .signup{
         width: 100%;
         font-size: 8px;
     }
